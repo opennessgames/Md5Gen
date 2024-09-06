@@ -1,0 +1,26 @@
+#
+#    FileName : CMakeLists.txt
+#    By : yzx
+#    MakeTime : 2024年9月4日 下午 11:33:33
+#				2024年8月29日 下午 6:43:47
+#    Copyright (C) 2023-2024 openGames
+#
+
+CC = gcc # 指定编译器
+CFLAGS = -Wall -O2
+LDFLAGS = -lssl -lcrypto
+TARGET = md5gen
+SRC = md5gen.c MakeMd5File.c modules/cJSON.c modules/HashVal.c modules/CRC32.c
+
+# 默认目标
+all: $(TARGET)
+
+# 编译目标
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) $(SRC) $(LDFLAGS) -o $(TARGET)
+
+# 清除目标
+clean:
+	rm -f $(TARGET)
+
+.PHONY: all clean
