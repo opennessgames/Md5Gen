@@ -74,10 +74,9 @@ int main(int argc, char *argv[])
 
     for (int i = 1; i < argc; i++)
     {
-        // 打印帮助
-        if (strcmp(argv[0], "-help"))
+        if (strcmp(argv[i], "-help") == 0)
         {
-            help();
+            help(); // 打印帮助
             return 0;
         }
         if (strcmp(argv[i], "-md5") == 0 && i + 1 < argc)
