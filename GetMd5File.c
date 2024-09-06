@@ -10,10 +10,12 @@
 #include <dirent.h>
 #include <sys/stat.h>
 #include <stdbool.h>
+#include "GetMd5File.h"
 #include "modules/cJSON.h"   //JSON处理模块
 #include "modules/HashVal.h" //哈希值计算模块
 #include "modules/CRC32.h"   //CRC32计算模块
 
+Summarize Sum;
 char *concatenate(const char *str1, const char *str2, const char *str3)
 {
     // 计算三个字符串长度
@@ -87,16 +89,42 @@ int compare_hashes(const char *file_path, cJSON *json_item)
         }
         if (Yes)
         {
+            Sum.valid++;
             printf("文件 %s 的MD5值校验通过\n", file_path);
         }
         else
         {
+            Sum.invalid++;
             printf("文件 %s 的MD5值校验不通过\n", file_path);
         }
     }
     return 1;
 }
+// 统计根对象数量
+int count_filtered_objects(const cJSON *root, const char *ignore_value)
+{
+    if (!cJSON_IsObject(root))
+    {
+        return 0;
+    }
 
+    int count = 0;
+    cJSON *item = NULL;
+    cJSON *value = NULL;
+
+    cJSON_ArrayForEach(item, root)
+    {
+        value = cJSON_GetObjectItem(root, item->string);
+        if (cJSON_IsString(value) && strcmp(value->valuestring, ignore_value) == 0)
+        {
+            // 忽略值为 "DIR" 的对象
+            continue;
+        }
+        count++;
+    }
+
+    return count;
+}
 // 遍历目录
 void traverse_directory(const char *folder_path, cJSON *json_root)
 {
@@ -121,7 +149,6 @@ void traverse_directory(const char *folder_path, cJSON *json_root)
         }
 
         snprintf(path, sizeof(path), "%s/%s", folder_path, entry->d_name);
-
         if (stat(path, &statbuf) == -1)
         {
             perror("无法获取文件状态");
@@ -139,10 +166,7 @@ void traverse_directory(const char *folder_path, cJSON *json_root)
             cJSON *file_item = cJSON_GetObjectItemCaseSensitive(json_root, path);
             if (file_item)
             {
-                if (!compare_hashes(path, file_item))
-                {
-                    printf("文件 %s 的哈希值不匹配\n", path);
-                }
+                compare_hashes(path, file_item);
             }
         }
     }
@@ -181,7 +205,8 @@ void md5gen_get(char *Md5FilePath, const char *FolderPath)
     fclose(ThisMD5JSON);                 // 关闭文件
 
     // 解析JSON串
-    cJSON *ThisMd5 = cJSON_Parse(Md5JsonString); // 解析
+    cJSON *ThisMd5 = cJSON_Parse(Md5JsonString);      // 解析
+    Sum.all = count_filtered_objects(ThisMd5, "DIR"); // 统计对象数量
     if (!ThisMd5)
     {
         perror("程序异常退出 解析失败!");
@@ -191,6 +216,12 @@ void md5gen_get(char *Md5FilePath, const char *FolderPath)
 
     // 递归遍历文件夹
     traverse_directory(FolderPath, ThisMd5);
+    Sum.missing = Sum.all - (Sum.valid / 4) - (Sum.invalid / 4); // 计算出丢失的有多少
+    printf("-------------- 总结 --------------\n");
+    printf("  通过      : %d\n", Sum.valid / 4);
+    printf("  未通过    : %d\n", Sum.invalid / 4);
+    printf("  丢失      : %d\n", Sum.missing);
+    printf("---------------------------------\n");
 
     // 释放JSON内存
     cJSON_Delete(ThisMd5);

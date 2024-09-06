@@ -26,10 +26,5 @@ typedef struct md5gen
     unsigned char CRC32;
 } SHSH;
 
-/*
-    valid - 通过
-    invalid - 不通过
-    missing - 文件丢失
-*/
 bool md5gen(cJSON *, char *, const char *, int); /* 生成Md5文件 */
 #endif                                           // MAKEMD5FILE_H
