@@ -205,8 +205,8 @@ void md5gen_get(char *Md5FilePath, const char *FolderPath)
     fclose(ThisMD5JSON);                 // 关闭文件
 
     // 解析JSON串
-    cJSON *ThisMd5 = cJSON_Parse(Md5JsonString);      // 解析
-    Sum.all = count_filtered_objects(ThisMd5, "DIR"); // 统计对象数量
+    cJSON *ThisMd5 = cJSON_Parse(Md5JsonString); // 解析
+
     if (!ThisMd5)
     {
         perror("程序异常退出 解析失败!");
@@ -214,6 +214,7 @@ void md5gen_get(char *Md5FilePath, const char *FolderPath)
         return;
     }
 
+    Sum.all = count_filtered_objects(ThisMd5, "DIR"); // 统计对象数量
     // 递归遍历文件夹
     traverse_directory(FolderPath, ThisMd5);
     Sum.missing = Sum.all - (Sum.valid / 4) - (Sum.invalid / 4); // 计算出丢失的有多少
