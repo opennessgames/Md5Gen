@@ -121,6 +121,7 @@ int count_filtered_objects(const cJSON *root, const char *ignore_value)
             continue;
         }
         count++;
+        printf("已获取 %d 对象\n", count);
     }
 
     return count;
@@ -200,7 +201,16 @@ void md5gen_get(char *Md5FilePath, const char *FolderPath)
         fclose(ThisMD5JSON);
         return;
     }
-    fread(Md5JsonString, 1, Md5FileLenght, ThisMD5JSON);
+
+    size_t Md5Read = fread(Md5JsonString, 1, Md5FileLenght, ThisMD5JSON);
+    if (Md5Read != Md5FileLenght)
+    {
+        perror("程序异常退出 读取文件失败!");
+        free(Md5JsonString);
+        fclose(ThisMD5JSON);
+        return;
+    }
+
     Md5JsonString[Md5FileLenght] = '\0'; // 添加 null 终止符
     fclose(ThisMD5JSON);                 // 关闭文件
 
