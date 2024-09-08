@@ -33,4 +33,6 @@ md5gen -md5 md5.json -dir ./FolderPath -mode 1
 md5gen -md5 md5.json -dir ./FolderPath -mode 2
 ```
 ## 友情提示
-喜欢的话记得点个star~ 谢谢喔
+1.喜欢的话记得点个⭐️支持一下~ 谢谢喔<br>
+2.如果你有任何改进建议或反馈，请随时告诉我们，我们很乐意听取你的意见。<br>
+3.我是新手,大佬轻喷~

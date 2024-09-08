@@ -15,9 +15,9 @@ add_executable(md5gen
 md5gen.c
 MakeMd5File.c
 GetMd5File.c
-modules/cJSON.c
-modules/HashVal.c
-modules/CRC32.c
+Modules/cJSON.c
+Modules/HashVal.c
+Modules/CRC32.c
 )
 
 # 动态共享库
@@ -25,9 +25,9 @@ add_library(md5gen_lib SHARED
 md5gen.c
 MakeMd5File.c
 GetMd5File.c
-modules/cJSON.c
-modules/HashVal.c
-modules/CRC32.c
+Modules/cJSON.c
+Modules/HashVal.c
+Modules/CRC32.c
 )
 
 # 链接库

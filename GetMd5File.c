@@ -11,9 +11,9 @@
 #include <sys/stat.h>
 #include <stdbool.h>
 #include "GetMd5File.h"
-#include "modules/cJSON.h"   //JSON处理模块
-#include "modules/HashVal.h" //哈希值计算模块
-#include "modules/CRC32.h"   //CRC32计算模块
+#include "Modules/cJSON.h"   //JSON处理模块
+#include "Modules/HashVal.h" //哈希值计算模块
+#include "Modules/CRC32.h"   //CRC32计算模块
 
 Summarize Sum;
 char *concatenate(const char *str1, const char *str2, const char *str3)
@@ -54,34 +54,22 @@ int compare_hashes(const char *file_path, cJSON *json_item)
         {
         case 0:
             hash = concatenate("\"", calcFileMd5Sum(file_path), "\"");
-            if (strcmp(hash, d) != 0)
-            {
-                Yes = false;
-            }
+            (strcmp(hash, d) != 0) ? (Yes = false) : (Yes = true);
             free(hash);
             break;
         case 1:
             hash = concatenate("\"", calcFileSHA1Sum(file_path), "\"");
-            if (strcmp(hash, d) != 0)
-            {
-                Yes = false;
-            }
+            (strcmp(hash, d) != 0) ? (Yes = false) : (Yes = true);
             free(hash);
             break;
         case 2:
             hash = concatenate("\"", calcFileSHA256Sum(file_path), "\"");
-            if (strcmp(hash, d) != 0)
-            {
-                Yes = false;
-            }
+            (strcmp(hash, d) != 0) ? (Yes = false) : (Yes = true);
             free(hash);
             break;
         case 3:
             hash = concatenate("\"", calcCRC32(file_path), "\"");
-            if (strcmp(hash, d) != 0)
-            {
-                Yes = false;
-            }
+            (strcmp(hash, d) != 0) ? (Yes = false) : (Yes = true);
             free(hash);
             break;
         default:
@@ -129,6 +117,7 @@ int count_filtered_objects(const cJSON *root, const char *ignore_value)
 // 遍历目录
 void traverse_directory(const char *folder_path, cJSON *json_root)
 {
+    printf("Dir %s\n", folder_path);
     DIR *dir;
     struct dirent *entry;
     char path[1024];

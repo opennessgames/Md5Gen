@@ -9,7 +9,7 @@
 #define MAKEMD5FILE_H
 
 #include <stdbool.h>
-#include "modules/cJSON.h"
+#include "Modules/cJSON.h"
 
 typedef enum
 {
@@ -18,6 +18,7 @@ typedef enum
     SHA256_SUM,
     CRC32_SUM,
 } Hash; // 哈希值类型
+
 typedef struct md5gen
 {
     unsigned char MD5;

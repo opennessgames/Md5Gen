@@ -1,0 +1,40 @@
+{
+	"/home/yzx/App/FHMF/src/Md5Gen/demo/File/hjkdkfs/34/2023毕业照.jpg":	{
+		"MD5":	"e149ac05bff25dfee03a7e020e40c09f",
+		"SHA1":	"7846885752e97b60ab2726750db7c6d0c73cc4bc",
+		"SHA256":	"786c80d1c25cb53440a228ed4bf8383932dc35cdbfc94359c33b09f2d6b914d7",
+		"CRC32":	"7E7A24AA"
+	},
+	"/home/yzx/App/FHMF/src/Md5Gen/demo/File/hjkdkfs/34/de05fec43942d63d618f19ac5d8e4719.jpg":	{
+		"MD5":	"2c5200e2c5ce08f833b35217a5baa82e",
+		"SHA1":	"4884e6c4fd57a1fdc6408ca660ebb53662aac440",
+		"SHA256":	"bb530cefb600ec3258eb4b662e8db2cda8236dd5c46fa0f34941fd236a8cb386",
+		"CRC32":	"62FF8A83"
+	},
+	"/home/yzx/App/FHMF/src/Md5Gen/demo/File/hjkdkfs/34":	"DIR",
+	"/home/yzx/App/FHMF/src/Md5Gen/demo/File/hjkdkfs/2023毕业照.jpg":	{
+		"MD5":	"e149ac05bff25dfee03a7e020e40c09f",
+		"SHA1":	"7846885752e97b60ab2726750db7c6d0c73cc4bc",
+		"SHA256":	"786c80d1c25cb53440a228ed4bf8383932dc35cdbfc94359c33b09f2d6b914d7",
+		"CRC32":	"7E7A24AA"
+	},
+	"/home/yzx/App/FHMF/src/Md5Gen/demo/File/hjkdkfs/de05fec43942d63d618f19ac5d8e4719.jpg":	{
+		"MD5":	"2c5200e2c5ce08f833b35217a5baa82e",
+		"SHA1":	"4884e6c4fd57a1fdc6408ca660ebb53662aac440",
+		"SHA256":	"bb530cefb600ec3258eb4b662e8db2cda8236dd5c46fa0f34941fd236a8cb386",
+		"CRC32":	"62FF8A83"
+	},
+	"/home/yzx/App/FHMF/src/Md5Gen/demo/File/hjkdkfs":	"DIR",
+	"/home/yzx/App/FHMF/src/Md5Gen/demo/File/2023毕业照.jpg":	{
+		"MD5":	"e149ac05bff25dfee03a7e020e40c09f",
+		"SHA1":	"7846885752e97b60ab2726750db7c6d0c73cc4bc",
+		"SHA256":	"786c80d1c25cb53440a228ed4bf8383932dc35cdbfc94359c33b09f2d6b914d7",
+		"CRC32":	"7E7A24AA"
+	},
+	"/home/yzx/App/FHMF/src/Md5Gen/demo/File/de05fec43942d63d618f19ac5d8e4719.jpg":	{
+		"MD5":	"2c5200e2c5ce08f833b35217a5baa82e",
+		"SHA1":	"4884e6c4fd57a1fdc6408ca660ebb53662aac440",
+		"SHA256":	"bb530cefb600ec3258eb4b662e8db2cda8236dd5c46fa0f34941fd236a8cb386",
+		"CRC32":	"62FF8A83"
+	}
+}

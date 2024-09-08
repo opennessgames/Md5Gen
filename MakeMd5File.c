@@ -11,9 +11,9 @@
 #include <sys/stat.h>
 #include <string.h>
 #include <stdlib.h>
-#include "modules/HashVal.h" //计算哈希值模块
-#include "modules/CRC32.h"   //计算CRC32值模块
-#include "modules/cJSON.h"   //处理JSON数据模块
+#include "Modules/HashVal.h" //计算哈希值模块
+#include "Modules/CRC32.h"   //计算CRC32值模块
+#include "Modules/cJSON.h"   //处理JSON数据模块
 
 bool md5gen(cJSON *MD5ROOT, char *Md5FilePath, const char *FolderPath, int deep)
 {

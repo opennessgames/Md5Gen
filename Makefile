@@ -241,6 +241,87 @@ MakeMd5File.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/MakeMd5File.c.s
 .PHONY : MakeMd5File.c.s
 
+Modules/CRC32.o: Modules/CRC32.c.o
+.PHONY : Modules/CRC32.o
+
+# target to build an object file
+Modules/CRC32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/Modules/CRC32.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/Modules/CRC32.c.o
+.PHONY : Modules/CRC32.c.o
+
+Modules/CRC32.i: Modules/CRC32.c.i
+.PHONY : Modules/CRC32.i
+
+# target to preprocess a source file
+Modules/CRC32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/Modules/CRC32.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/Modules/CRC32.c.i
+.PHONY : Modules/CRC32.c.i
+
+Modules/CRC32.s: Modules/CRC32.c.s
+.PHONY : Modules/CRC32.s
+
+# target to generate assembly for a file
+Modules/CRC32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/Modules/CRC32.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/Modules/CRC32.c.s
+.PHONY : Modules/CRC32.c.s
+
+Modules/HashVal.o: Modules/HashVal.c.o
+.PHONY : Modules/HashVal.o
+
+# target to build an object file
+Modules/HashVal.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/Modules/HashVal.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/Modules/HashVal.c.o
+.PHONY : Modules/HashVal.c.o
+
+Modules/HashVal.i: Modules/HashVal.c.i
+.PHONY : Modules/HashVal.i
+
+# target to preprocess a source file
+Modules/HashVal.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/Modules/HashVal.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/Modules/HashVal.c.i
+.PHONY : Modules/HashVal.c.i
+
+Modules/HashVal.s: Modules/HashVal.c.s
+.PHONY : Modules/HashVal.s
+
+# target to generate assembly for a file
+Modules/HashVal.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/Modules/HashVal.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/Modules/HashVal.c.s
+.PHONY : Modules/HashVal.c.s
+
+Modules/cJSON.o: Modules/cJSON.c.o
+.PHONY : Modules/cJSON.o
+
+# target to build an object file
+Modules/cJSON.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/Modules/cJSON.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/Modules/cJSON.c.o
+.PHONY : Modules/cJSON.c.o
+
+Modules/cJSON.i: Modules/cJSON.c.i
+.PHONY : Modules/cJSON.i
+
+# target to preprocess a source file
+Modules/cJSON.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/Modules/cJSON.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/Modules/cJSON.c.i
+.PHONY : Modules/cJSON.c.i
+
+Modules/cJSON.s: Modules/cJSON.c.s
+.PHONY : Modules/cJSON.s
+
+# target to generate assembly for a file
+Modules/cJSON.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/Modules/cJSON.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/Modules/cJSON.c.s
+.PHONY : Modules/cJSON.c.s
+
 md5gen.o: md5gen.c.o
 .PHONY : md5gen.o
 
@@ -268,87 +349,6 @@ md5gen.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/md5gen.c.s
 .PHONY : md5gen.c.s
 
-modules/CRC32.o: modules/CRC32.c.o
-.PHONY : modules/CRC32.o
-
-# target to build an object file
-modules/CRC32.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/modules/CRC32.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/modules/CRC32.c.o
-.PHONY : modules/CRC32.c.o
-
-modules/CRC32.i: modules/CRC32.c.i
-.PHONY : modules/CRC32.i
-
-# target to preprocess a source file
-modules/CRC32.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/modules/CRC32.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/modules/CRC32.c.i
-.PHONY : modules/CRC32.c.i
-
-modules/CRC32.s: modules/CRC32.c.s
-.PHONY : modules/CRC32.s
-
-# target to generate assembly for a file
-modules/CRC32.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/modules/CRC32.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/modules/CRC32.c.s
-.PHONY : modules/CRC32.c.s
-
-modules/HashVal.o: modules/HashVal.c.o
-.PHONY : modules/HashVal.o
-
-# target to build an object file
-modules/HashVal.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/modules/HashVal.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/modules/HashVal.c.o
-.PHONY : modules/HashVal.c.o
-
-modules/HashVal.i: modules/HashVal.c.i
-.PHONY : modules/HashVal.i
-
-# target to preprocess a source file
-modules/HashVal.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/modules/HashVal.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/modules/HashVal.c.i
-.PHONY : modules/HashVal.c.i
-
-modules/HashVal.s: modules/HashVal.c.s
-.PHONY : modules/HashVal.s
-
-# target to generate assembly for a file
-modules/HashVal.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/modules/HashVal.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/modules/HashVal.c.s
-.PHONY : modules/HashVal.c.s
-
-modules/cJSON.o: modules/cJSON.c.o
-.PHONY : modules/cJSON.o
-
-# target to build an object file
-modules/cJSON.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/modules/cJSON.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/modules/cJSON.c.o
-.PHONY : modules/cJSON.c.o
-
-modules/cJSON.i: modules/cJSON.c.i
-.PHONY : modules/cJSON.i
-
-# target to preprocess a source file
-modules/cJSON.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/modules/cJSON.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/modules/cJSON.c.i
-.PHONY : modules/cJSON.c.i
-
-modules/cJSON.s: modules/cJSON.c.s
-.PHONY : modules/cJSON.s
-
-# target to generate assembly for a file
-modules/cJSON.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen.dir/build.make CMakeFiles/md5gen.dir/modules/cJSON.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/md5gen_lib.dir/build.make CMakeFiles/md5gen_lib.dir/modules/cJSON.c.s
-.PHONY : modules/cJSON.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -369,18 +369,18 @@ help:
 	@echo "... MakeMd5File.o"
 	@echo "... MakeMd5File.i"
 	@echo "... MakeMd5File.s"
+	@echo "... Modules/CRC32.o"
+	@echo "... Modules/CRC32.i"
+	@echo "... Modules/CRC32.s"
+	@echo "... Modules/HashVal.o"
+	@echo "... Modules/HashVal.i"
+	@echo "... Modules/HashVal.s"
+	@echo "... Modules/cJSON.o"
+	@echo "... Modules/cJSON.i"
+	@echo "... Modules/cJSON.s"
 	@echo "... md5gen.o"
 	@echo "... md5gen.i"
 	@echo "... md5gen.s"
-	@echo "... modules/CRC32.o"
-	@echo "... modules/CRC32.i"
-	@echo "... modules/CRC32.s"
-	@echo "... modules/HashVal.o"
-	@echo "... modules/HashVal.i"
-	@echo "... modules/HashVal.s"
-	@echo "... modules/cJSON.o"
-	@echo "... modules/cJSON.i"
-	@echo "... modules/cJSON.s"
 .PHONY : help
 
 
